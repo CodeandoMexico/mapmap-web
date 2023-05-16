@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Mapatón Xalapa 2016 | LabMap</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+
+<body>
+	<div id='map'></div>
+	<script>
+		mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYXRvbiIsImEiOiJjaXJoem5ycngwMXkzZ2Jucjd2bnBleTVrIn0.iOLejOW8_OVdq9g9oL3DFQ';
+		var map = new mapboxgl.Map({
+			container: 'map', // container id
+			style: 'mapbox://styles/mapbox/light-v9', //hosted style id
+			center: [-96.92, 19.51], // starting position
+			zoom: 13 // starting zoom
+		});
+		// disable map zoom when using scroll
+		map.scrollZoom.disable();
+		// Add zoom and rotation controls to the map.
+		map.addControl(new mapboxgl.Navigation());
+    </script>
+
+</body>
+</html>
